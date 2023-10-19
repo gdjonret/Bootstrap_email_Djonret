@@ -1,0 +1,90 @@
+/* Reset some default browser styles */
+body, ul, li, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Style the main content area */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.email-list {
+    flex: 1;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.email {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.email:hover {
+    background-color: #ececec;
+}
+
+.email .sender {
+    font-weight: bold;
+}
+
+.email .subject {
+    margin: 5px 0;
+}
+
+.email .date {
+    color: #888;
+}
+
+.email-content {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
