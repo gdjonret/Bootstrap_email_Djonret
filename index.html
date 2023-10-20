@@ -3,68 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stain Busters Email</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to your external stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <title>Email Web App</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">Sent</a></li>
-                <li><a href="#">Drafts</a></li>
-                <li><a href="#">Trash</a></li>
-                <li><a href="#">Archive</a></li>
-                <li><a href="#">Spam</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Stain Busters Email</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inbox</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Important</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Drafts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Spam</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trash</a>
+                </li>
             </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="email-list">
-            <div class="email">
-                <div class="sender">John Doe</div>
-                <div class="subject">Meeting Tomorrow</div>
-                <div class="date">2 hours ago</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <section class="compose-section">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#composeModal">Compose</button>
+                </section>
+                <section class="inbox-section">
+                    <input type="text" class="form-control" placeholder="Search emails">
+                    <!-- Folders or Lists -->
+                    <div class="folders">
+                        <h3>Folders</h3>
+                        <ul>
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">Important</a></li>
+                            <li><a href="#">Sent</a></li>
+                            <li><a href="#">Drafts</a></li>
+                            <li><a href="#">Spam</a></li>
+                            <li><a href="#">Trash</a></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-            <div class="email">
-                <div class="sender">Alice Johnson</div>
-                <div class="subject">Project Update</div>
-                <div class="date">4 hours ago</div>
+            <div class="col-12 col-md-4">
+                <section class="email-details-section">
+                    <div class="email-header">
+                        <p>From: Sender Name</p>
+                        <p>To: Your Email</p>
+                        <p>Subject: Email Subject</p>
+                    </div>
+                    <div class="email-content">
+                        <p>Email Content:</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tortor ut arcu vulputate malesuada id at tellus. Curabitur sit amet vehicula libero. Nullam congue lectus quis turpis laoreet, a interdum lectus interdum. Suspendisse potenti. Integer eget varius arcu. Fusce at ullamcorper turpis.</p>
+                        <p>Vestibulum tincidunt vitae elit eu consectetur. Phasellus at tincidunt dolor. Nulla facilisi. Nulla nec augue in arcu tincidunt varius.</p>
+                    </div>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#replyModal">Reply</button>
+                    <textarea class="form-control" rows="4" placeholder="Compose your reply..."></textarea>
+                </section>
             </div>
-            <div class="email">
-                <div class="sender">David Smith</div>
-                <div class="subject">New Opportunity</div>
-                <div class="date">Yesterday</div>
+            <div class="col-12 col-md-4">
+                <!-- List of Email Messages -->
+                <section class="email-list-section">
+                    <h3>Email Messages</h3>
+                    <ul>
+                        <li class="selected-email"><a href="#">Email 1</a></li>
+                        <li><a href="#">Email 2</a></li>
+                        <li><a href="#">Email 3</a></li>
+                    </ul>
+                </section>
             </div>
-            <div class="email">
-                <div class="sender">Sarah Williams</div>
-                <div class="subject">Re: Weekly Report</div>
-                <div class="date">2 days ago</div>
-            </div>
-            <!-- Add more email previews here -->
-            <div class="email">
-                <div class="sender">Megan Brown</div>
-                <div class="subject">Re: Product Launch</div>
-                <div class="date">3 days ago</div>
-            </div>
-            <div class="email">
-                <div class="sender">Michael Lee</div>
-                <div class="subject">Invitation to Conference</div>
-                <div class="date">1 week ago</div>
-            </div>
-        </section>
-        
-        <section class="email-content">
-            <h2>Meeting Tomorrow</h2>
-            <p>Hi, let's have a meeting tomorrow at 10 AM. Here's the agenda...</p>
-            <p>Best regards,</p>
-            <p>John</p>
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Email Web App. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    <!-- Bootstrap Modals -->
+    <div class="modal fade" id="composeModal" tabindex="-1" role="dialog" aria-labelledby="composeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="composeModalLabel">Compose Email</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add the Compose Email form here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="replyModalLabel">Reply to Email</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add the Reply Email form here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

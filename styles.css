@@ -1,90 +1,111 @@
-/* Reset some default browser styles */
-body, ul, li, h1, h2, p, a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
+/* Styles for the navigation bar */
+.navbar {
+    background-color: #4285f4;
 }
 
-/* Set a background color for the entire page */
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-}
-
-/* Style the header and navigation */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Style the main content area */
-main {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.email-list {
-    flex: 1;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.email {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-.email:hover {
-    background-color: #ececec;
-}
-
-.email .sender {
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
     font-weight: bold;
 }
 
-.email .subject {
-    margin: 5px 0;
+.navbar-toggler-icon {
+    background-color: #fff;
 }
 
-.email .date {
-    color: #888;
+/* Styles for the compose button */
+.btn-primary {
+    background-color: #4285f4;
+    border-color: #4285f4;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* Styles for the inbox section */
+.inbox-section {
+    margin-top: 20px;
+}
+
+.form-control {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Styles for email details */
+.email-details-section {
+    margin-top: 20px;
+}
+
+.email-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
 }
 
 .email-content {
-    flex: 2;
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Style the footer */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
+/* Styles for the list of email messages */
+.email-list-section {
+    margin-top: 20px;
+}
+
+.selected-email {
+    background-color: #f0f0f0;
+    color: #333;
     padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.selected-email:hover {
+    background-color: #e0e0e0;
+}
+
+/* Styles for modals */
+.modal-content {
+    border: 2px solid #4285f4;
+    border-radius: 10px;
+}
+
+.modal-title {
+    color: #4285f4;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Styles for textarea */
+textarea {
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    resize: vertical;
+}
+
+/* Gmail-like background for the main container */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    color: #333;
 }
